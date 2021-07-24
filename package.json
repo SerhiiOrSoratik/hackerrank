@@ -1,0 +1,19 @@
+{
+  "name": "hackerrank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "leaderboard.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/preset-env": "^7.14.8",
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "babel-jest": "^27.0.6"
+  }
+}
