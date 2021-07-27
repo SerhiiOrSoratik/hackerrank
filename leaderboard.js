@@ -32,8 +32,8 @@ function readLine() {
  */
 
 export function climbingLeaderboard(ranked, player) {
-    // Унікальні значення
-let rank = [];
+    let result = [];
+    let rank = [];
   for (let i = 0; i < ranked.length; i++) {
     if (rank.length === 0) {
       rank.push(ranked[i]);
@@ -43,19 +43,18 @@ let rank = [];
       }
       rank.push(ranked[i]);
     }
-  }
-  console.log(rank)
-  let res = [];
-  let lowestRank = rank.length;
-  for (let i = 0; i < player.length; i++) {
-    while (player[i] >= rank[lowestRank - 1] && lowestRank > 0) {
-      rank.pop;
-      lowestRank--;
-    }
-    res.push(lowestRank + 1);
-  }
-  return res;
 }
+
+    let rankLength = rank.length;
+    for (let i = 0; i < player.length; i++) {
+        while(player[i] >= rank[rankLength - 1] && rankLength > 0) {
+            rank.pop;
+            rankLength--;
+        }
+        result.push(rankLength + 1);
+    }
+    return result;
+  }
 
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
